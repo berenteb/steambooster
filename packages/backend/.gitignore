@@ -7,7 +7,7 @@
 
 # testing
 /coverage
-
+games.json
 # production
 /build
 

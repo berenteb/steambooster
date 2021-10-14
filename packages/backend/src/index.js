@@ -2,6 +2,7 @@ require("dotenv").config();
 const http = require("http");
 const SteamUser = require("steam-user");
 const user = new SteamUser();
+const games = require("./games.json")
 
 const Actions = {
   LOGIN: "login",
@@ -19,7 +20,7 @@ class UserSession {
     this.isActive = false;
     this.username = "";
     this.password = "";
-    this.games = [];
+    this.games = games.games || [];
   }
   saveUsernameAndPassword(username, password) {
     this.username = username;
