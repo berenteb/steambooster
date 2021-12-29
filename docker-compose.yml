@@ -1,0 +1,8 @@
+services:
+  backend:
+    build: ./packages/backend
+    command: node src/index.js
+  frontend:
+    build: ./packages/frontend
+    ports:
+      - '5002:80'
